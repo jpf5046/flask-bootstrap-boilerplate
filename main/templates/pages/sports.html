@@ -1,0 +1,40 @@
+{% extends 'layouts/main.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">sports</h1>
+          <p>top tweets from each of the different divisions from last night</p>
+          <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-4">
+            <h2>baseball</h2>
+            <p><a class="btn btn-secondary" href="{{ url_for('pages.sports_baseball_todays_games') }}" role="button">todays games &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="{{ url_for('pages.sports_baseball_social_top_tweets') }}" role="button">social medial highlights &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="{{ url_for('pages.sports_baseball_yesterdays_games') }}" role="button">yesterday's games &raquo;</a></p>
+          </div>
+          <div class="col-md-4">
+            <h2>football</h2>
+            <p><a class="btn btn-secondary" href="#" role="button">this week's games &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="#" role="button">social media &raquo;</a></p>
+          </div>
+          <div class="col-md-4">
+            <h2>basketball</h2>
+            <p><a class="btn btn-secondary" href="#" role="button">this week's games &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="#" role="button">social media &raquo;</a></p>
+          </div>
+
+        </div>
+
+        <hr>
+
+      </div> <!-- /container -->
+
+{% endblock %}

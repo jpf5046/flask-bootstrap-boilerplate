@@ -1,0 +1,48 @@
+  <style type="text/css">
+
+.center {
+  text-align: center;
+  text-decoration:none;
+}
+
+.my-container{
+    margin:auto;
+    width:800px;
+  }
+
+table.dataframe, .dataframe th, .dataframe td {
+  border: none;
+  border-bottom: 1px solid #C8C8C8;
+  border-collapse: collapse;
+  text-align:left;
+  padding: 10px;
+  margin-bottom: 40px;
+  font-size: 0.9em;
+}
+tr:nth-child(odd)		{ background-color:#eee; }
+tr:nth-child(even)	{ background-color:#fff; }
+
+tr:hover            { background-color: #ffff99;}
+  </style>
+
+{% extends 'layouts/main.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">baseball game list</h1>
+          <p>See today's games and the breakdown of yesterday's games</p>
+          <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
+        </div>
+      </div>
+
+
+<div class="my-container">
+        {{table | safe}}
+</div>
+
+
+
+{% endblock %}
