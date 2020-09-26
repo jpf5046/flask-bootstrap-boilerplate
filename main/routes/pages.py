@@ -39,6 +39,13 @@ def sports():
 def other():
     return render_template('pages/other.html')
 
+@blueprint.route('/sports_baseball_javascript')
+def chart():
+    legend = 'Monthly Data'
+    labels = ["January", "February", "March", "April", "May", "June", "July", "August"]
+    values = [10, 9, 8, 7, 6, 4, 7, 8]
+    return render_template('pages/sports_baseball_javascript.html', values=values, labels=labels, legend=legend)
+
 @blueprint.route('/yesterdays_baseball_games')
 def sports_baseball_yesterdays_games():
     yesterdays_games = pd.read_sql_query("SELECT home_team_name, away_team_name, home_total_score, away_total_score  FROM public.yesterdays_games", engine)
